@@ -1,13 +1,17 @@
-all: nods experiments collect analyze
+all: nods experiments collect comparisons analyze
 
 nods:
-	rm streams/.DS_Store
+	rm -rf streams/.DS_Store
 
 experiments:
 	python -W ignore experiment_1.py
 
 collect:
 	python -W ignore collect.py
+
+comparisons:
+	rm -rf cmp/*
+	python comparative.py
 
 analyze:
 	python analyze.py
