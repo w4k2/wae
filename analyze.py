@@ -45,7 +45,7 @@ for j, db in enumerate(streams):
 
     np.savetxt("summaries/cmp_%s" % db, csv_data, fmt='%.3f', delimiter=',')
 
-"""
+
 # PP impact
 print("Analyze post pruning impact")
 for j, db in enumerate(streams):
@@ -157,4 +157,3 @@ for j, db in enumerate(streams):
     plt.savefig("analysis/a%i.png" % j)
     plt.clf()
     np.savetxt("summaries/a_%s" % db, csv_data, fmt='%.3f', delimiter=',')
-"""
