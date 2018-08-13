@@ -1,4 +1,7 @@
-all: experiments collect analyze
+all: nods experiments collect analyze
+
+nods:
+	rm streams/.DS_Store
 
 experiments:
 	python -W ignore experiment_1.py

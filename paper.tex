@@ -1,0 +1,296 @@
+\documentclass[]{article}
+\usepackage{geometry}
+\geometry{a4paper, margin=.75in}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{xcolor}
+
+\definecolor{expred}{rgb}{.7 , .3 , .3}
+\definecolor{expgreen}{rgb}{.3 , .7 , .3}
+\definecolor{expblue}{rgb}{.3 , .3 , .7}
+\definecolor{expother}{rgb}{.3 , .7 , .7}
+\definecolor{expanother}{rgb}{.7 , .3 , .7}
+
+\usepackage{comment}
+
+\newcommand{\plotpp}[2]{
+\pgfplotsset{width=6.25cm,height=2cm,compat=1.3}
+\begin{tikzpicture}
+\pgfplotsset{
+    scale only axis,
+}
+\begin{axis}[
+	align = center,
+	title = {#1},
+	smooth,
+	axis y line*=left,
+	ymin=.4, ymax=1,
+	xlabel=Processed chunks,
+	%yticklabels = {,\oldstylenums{0}\%,\oldstylenums{20}\%,\oldstylenums{40}\%,\oldstylenums{60}\%,\oldstylenums{80}\%,\oldstylenums{100}\%},
+	ylabel={Accuracy},
+	grid,
+	legend columns=2,
+	  legend style={
+	    draw=none,
+	    column sep=1ex,
+	  },
+	font=\scriptsize,
+	scaled x ticks=false,
+	yminorticks=false,
+	axis x line=bottom,axis y line=left,
+    grid style={line width=.1pt, draw=gray!10},
+    major grid style={line width=.2pt,draw=gray!50},
+    minor tick num=5,
+    ymajorgrids,
+	yminorgrids,
+]
+	\addplot[color=expred] table [x index = {0}, y index = {1}, col sep=comma, mark=none]
+	{summaries/pp_#2.arff};
+	\addplot[color=expblue] table [x index = {0}, y index = {2}, col sep=comma, mark=none]
+	{summaries/pp_#2.arff};
+\end{axis}
+\end{tikzpicture}
+}
+
+
+\newcommand{\plott}[2]{
+\pgfplotsset{width=6.25cm,height=2cm,compat=1.3}
+\begin{tikzpicture}
+\pgfplotsset{
+    scale only axis,
+}
+\begin{axis}[
+	align = center,
+	title = {#1},
+	smooth,
+	axis y line*=left,
+	ymin=.4, ymax=1,
+	xlabel=Processed chunks,
+	%yticklabels = {,\oldstylenums{0}\%,\oldstylenums{20}\%,\oldstylenums{40}\%,\oldstylenums{60}\%,\oldstylenums{80}\%,\oldstylenums{100}\%},
+	ylabel={Accuracy},
+	grid,
+	legend columns=2,
+	  legend style={
+	    draw=none,
+	    column sep=1ex,
+	  },
+	font=\scriptsize,
+	scaled x ticks=false,
+	yminorticks=false,
+	axis x line=bottom,axis y line=left,
+    grid style={line width=.1pt, draw=gray!10},
+    major grid style={line width=.2pt,draw=gray!50},
+    minor tick num=5,
+    ymajorgrids,
+	yminorgrids,
+]
+	\addplot[color=expred] table [x index = {0}, y index = {1}, col sep=comma, mark=none]
+	{summaries/t_#2.arff};
+	\addplot[color=expblue] table [x index = {0}, y index = {2}, col sep=comma, mark=none]
+	{summaries/t_#2.arff};
+	\addplot[color=expgreen] table [x index = {0}, y index = {3}, col sep=comma, mark=none]
+	{summaries/t_#2.arff};
+	\addplot[color=expother] table [x index = {0}, y index = {4}, col sep=comma, mark=none]
+	{summaries/t_#2.arff};
+	\addplot[color=expanother] table [x index = {0}, y index = {5}, col sep=comma, mark=none]
+	{summaries/t_#2.arff};
+\end{axis}
+\end{tikzpicture}
+}
+
+
+\newcommand{\plotw}[2]{
+\pgfplotsset{width=6.25cm,height=2cm,compat=1.3}
+\begin{tikzpicture}
+\pgfplotsset{
+    scale only axis,
+}
+\begin{axis}[
+	align = center,
+	title = {#1},
+	smooth,
+	axis y line*=left,
+	ymin=.4, ymax=1,
+	xlabel=Processed chunks,
+	%yticklabels = {,\oldstylenums{0}\%,\oldstylenums{20}\%,\oldstylenums{40}\%,\oldstylenums{60}\%,\oldstylenums{80}\%,\oldstylenums{100}\%},
+	ylabel={Accuracy},
+	grid,
+	legend columns=2,
+	  legend style={
+	    draw=none,
+	    column sep=1ex,
+	  },
+	font=\scriptsize,
+	scaled x ticks=false,
+	yminorticks=false,
+	axis x line=bottom,axis y line=left,
+    grid style={line width=.1pt, draw=gray!10},
+    major grid style={line width=.2pt,draw=gray!50},
+    minor tick num=5,
+    ymajorgrids,
+	yminorgrids,
+]
+	\addplot[color=expred] table [x index = {0}, y index = {1}, col sep=comma, mark=none]
+	{summaries/w_#2.arff};
+	\addplot[color=expblue] table [x index = {0}, y index = {2}, col sep=comma, mark=none]
+	{summaries/w_#2.arff};
+	\addplot[color=expgreen] table [x index = {0}, y index = {3}, col sep=comma, mark=none]
+	{summaries/w_#2.arff};
+	\addplot[color=expother] table [x index = {0}, y index = {4}, col sep=comma, mark=none]
+	{summaries/w_#2.arff};
+\end{axis}
+\end{tikzpicture}
+}
+
+
+\newcommand{\plota}[2]{
+\pgfplotsset{width=6.25cm,height=2cm,compat=1.3}
+\begin{tikzpicture}
+\pgfplotsset{
+    scale only axis,
+}
+\begin{axis}[
+	align = center,
+	title = {#1},
+	smooth,
+	axis y line*=left,
+	ymin=.4, ymax=1,
+	xlabel=Processed chunks,
+	%yticklabels = {,\oldstylenums{0}\%,\oldstylenums{20}\%,\oldstylenums{40}\%,\oldstylenums{60}\%,\oldstylenums{80}\%,\oldstylenums{100}\%},
+	ylabel={Accuracy},
+	grid,
+	legend columns=2,
+	  legend style={
+	    draw=none,
+	    column sep=1ex,
+	  },
+	font=\scriptsize,
+	scaled x ticks=false,
+	yminorticks=false,
+	axis x line=bottom,axis y line=left,
+    grid style={line width=.1pt, draw=gray!10},
+    major grid style={line width=.2pt,draw=gray!50},
+    minor tick num=5,
+    ymajorgrids,
+	yminorgrids,
+]
+	\addplot[color=expred] table [x index = {0}, y index = {1}, col sep=comma, mark=none]
+	{summaries/a_#2.arff};
+	\addplot[color=expblue] table [x index = {0}, y index = {2}, col sep=comma, mark=none]
+	{summaries/a_#2.arff};
+	\addplot[color=expgreen] table [x index = {0}, y index = {3}, col sep=comma, mark=none]
+	{summaries/a_#2.arff};
+\end{axis}
+\end{tikzpicture}
+}
+
+
+\newcommand{\plotc}[2]{
+\pgfplotsset{width=12.5cm,height=2.5cm,compat=1.3}
+\begin{tikzpicture}
+\pgfplotsset{
+    scale only axis,
+}
+\begin{axis}[
+	align = center,
+	title = {#1},
+	smooth,
+	axis y line*=left,
+	ymin=.4, ymax=1,
+	xlabel=Processed chunks,
+	%yticklabels = {,\oldstylenums{0}\%,\oldstylenums{20}\%,\oldstylenums{40}\%,\oldstylenums{60}\%,\oldstylenums{80}\%,\oldstylenums{100}\%},
+	ylabel={Accuracy},
+	grid,
+	legend columns=2,
+	  legend style={
+	    draw=none,
+	    column sep=1ex,
+	  },
+	font=\scriptsize,
+	scaled x ticks=false,
+	yminorticks=false,
+	axis x line=bottom,axis y line=left,
+    grid style={line width=.1pt, draw=gray!10},
+    major grid style={line width=.2pt,draw=gray!50},
+    minor tick num=5,
+    ymajorgrids,
+	yminorgrids,
+]
+	\addplot[color=expred, thick] table [x index = {0}, y index = {1}, col sep=comma, mark=none]
+	{summaries/cmp_#2.arff};
+	\addplot[color=expblue] table [x index = {0}, y index = {2}, col sep=comma, mark=none]
+	{summaries/cmp_#2.arff};
+	\addplot[color=expgreen] table [x index = {0}, y index = {3}, col sep=comma, mark=none]
+	{summaries/cmp_#2.arff};
+	\addplot[color=expother] table [x index = {0}, y index = {4}, col sep=comma, mark=none]
+	{summaries/cmp_#2.arff};
+\end{axis}
+\end{tikzpicture}
+}
+
+\begin{document}
+	
+\section{Post-pruning}
+\begin{center}
+{\bfseries\scriptsize\color{expred}---With, \color{expblue}---Without.}
+
+\plotpp{h1h2}{sd_s_hyp_r1_s_hyp_r2}
+\plotpp{h1h3}{sd_s_hyp_r1_s_hyp_r3}
+\plotpp{h2h3}{sd_s_hyp_r2_s_hyp_r3}
+\plotpp{r1r2}{sd_s_rbf_r1_s_rbf_r2}
+\plotpp{r1r3}{sd_s_rbf_r1_s_rbf_r3}
+\plotpp{r2r3}{sd_s_rbf_r2_s_rbf_r3}	
+\end{center}
+
+\section{Theta}
+\begin{center}
+{\bfseries\scriptsize\color{expred}---.1, \color{expblue}---.3, \color{expgreen}---.5, \color{expother}---.7, \color{expanother}---.9.}
+
+\plott{h1h2}{sd_s_hyp_r1_s_hyp_r2}
+\plott{h1h3}{sd_s_hyp_r1_s_hyp_r3}
+\plott{h2h3}{sd_s_hyp_r2_s_hyp_r3}
+\plott{r1r2}{sd_s_rbf_r1_s_rbf_r2}
+\plott{r1r3}{sd_s_rbf_r1_s_rbf_r3}
+\plott{r2r3}{sd_s_rbf_r2_s_rbf_r3}	
+\end{center}
+
+
+\section{Weight calculation method}
+\begin{center}
+{\bfseries\scriptsize\color{expred}---same for each, \color{expblue}---kuncheva, \color{expgreen}---\textsc{pta} related to whole, \color{expother}---bell curve}
+
+\plotw{h1h2}{sd_s_hyp_r1_s_hyp_r2}
+\plotw{h1h3}{sd_s_hyp_r1_s_hyp_r3}
+\plotw{h2h3}{sd_s_hyp_r2_s_hyp_r3}
+\plotw{r1r2}{sd_s_rbf_r1_s_rbf_r2}
+\plotw{r1r3}{sd_s_rbf_r1_s_rbf_r3}
+\plotw{r2r3}{sd_s_rbf_r2_s_rbf_r3}	
+\end{center}
+
+
+\section{Aging method}
+\begin{center}
+{\bfseries\scriptsize\color{expred}---weights proportional, \color{expblue}---constant, \color{expgreen}---gaussian}
+
+\plota{h1h2}{sd_s_hyp_r1_s_hyp_r2}
+\plota{h1h3}{sd_s_hyp_r1_s_hyp_r3}
+\plota{h2h3}{sd_s_hyp_r2_s_hyp_r3}
+\plota{r1r2}{sd_s_rbf_r1_s_rbf_r2}
+\plota{r1r3}{sd_s_rbf_r1_s_rbf_r3}
+\plota{r2r3}{sd_s_rbf_r2_s_rbf_r3}	
+\end{center}
+
+
+\section{Method comparison}
+\begin{center}
+{\bfseries\scriptsize\color{expred}---WAE, \color{expblue}---AUE, \color{expgreen}---AWE, \color{expother}---DWM}
+
+\plotc{h1h2}{sd_s_hyp_r1_s_hyp_r2}
+\plotc{h1h3}{sd_s_hyp_r1_s_hyp_r3}
+\plotc{h2h3}{sd_s_hyp_r2_s_hyp_r3}
+\plotc{r1r2}{sd_s_rbf_r1_s_rbf_r2}
+\plotc{r1r3}{sd_s_rbf_r1_s_rbf_r3}
+\plotc{r2r3}{sd_s_rbf_r2_s_rbf_r3}	
+\end{center}
+
+\end{document}
