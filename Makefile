@@ -15,6 +15,11 @@ get_data:
 	unzip bare_streams.zip -d streams
 	rm bare_streams.zip
 
+moa:
+	java -cp moa/moa.jar -javaagent:moa/sizeofag-1.0.0.jar moa.gui.GUI
+
 clean:
 	rm results/*
 	rm figures/*
+
+.PHONY: moa
