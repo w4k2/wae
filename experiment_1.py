@@ -12,7 +12,7 @@ warnings.simplefilter(action='ignore')
 # Prepare
 base_clfs = h.base_clfs()
 streams = h.streams()
-#streams = ["toyset.arff"]
+# streams = ["toyset.arff"]
 
 WEIGHT_CALCULATION = ('same_for_each', 'kuncheva',
                       'pta_related_to_whole',
