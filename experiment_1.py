@@ -12,17 +12,10 @@ warnings.simplefilter(action='ignore')
 # Prepare
 base_clfs = h.base_clfs()
 streams = h.streams()
-# streams = ["toyset.arff"]
-
-WEIGHT_CALCULATION = ('same_for_each', 'kuncheva',
-                      'pta_related_to_whole',
-                      'bell_curve')
-
-AGING_METHOD = ('weights_proportional', 'constant',
-                'gaussian')
-THETA = (.1, .3, .5, .7, .9)
-POST_PRUNING = (True, False)
-
+WEIGHT_CALCULATION = h.WEIGHT_CALCULATION()
+AGING_METHOD = h.AGING_METHOD()
+THETA = h.THETA()
+POST_PRUNING = h.POST_PRUNING()
 count = len(streams) * len(WEIGHT_CALCULATION) * len(AGING_METHOD) * len(THETA) * len(POST_PRUNING) * len(base_clfs)
 
 # Process

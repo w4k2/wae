@@ -11,9 +11,20 @@ def streams():
 def base_clfs():
     """List of used base classifiers."""
     return {
-        #"DT": tree.DecisionTreeClassifier(),
         "NB": naive_bayes.GaussianNB(),
-        #"SVC": svm.SVC(probability=True),
-        #"MLP": neural_network.MLPClassifier(),
-        #"kNN": neighbors.KNeighborsClassifier()
     }
+
+def WEIGHT_CALCULATION():
+    return ('same_for_each', 'kuncheva',
+                      'pta_related_to_whole',
+                      'bell_curve')
+
+def AGING_METHOD():
+    return ('weights_proportional', 'constant',
+                'gaussian')
+
+def THETA():
+    return (0, .1, .3, .5, .7, .9)
+
+def POST_PRUNING():
+    return (True, False)
