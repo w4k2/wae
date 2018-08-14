@@ -26,4 +26,4 @@ Do eksperymentów należy użyc dość sporej liczby baz. Zarówno syntety
 
 ## Eksperyment 2 - porównanie WAE z innymi klasyfikatorami
 
-Porównanie kilku najlepszych ustawień z eksperymentu 1 z klasyfikatorami zna- nymi z literatury.
+Porównanie kilku najlepszych ustawień z eksperymentu 1 z klasyfikatorami znanymi z literatury.

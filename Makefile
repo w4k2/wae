@@ -1,4 +1,4 @@
-all: nods experiments collect comparisons analyze
+all: nods experiments collect analyze
 
 nods:
 	rm -rf streams/.DS_Store
