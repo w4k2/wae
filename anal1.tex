@@ -1,0 +1,38 @@
+\begin{tabular}{p{3cm}|c|c|c|c|c|c|c|c|c|c}
+\toprule
+& \multicolumn{10}{c}{\bfseries\scriptsize Mean accuracy and standard deviation for given method parameter}\\
+\scriptsize\bfseries Value &
+\multicolumn{1}{c|}{\scriptsize\bfseries SD H1R1} &
+\multicolumn{1}{c|}{\scriptsize\bfseries SD H3R3} &
+\multicolumn{1}{c|}{\scriptsize\bfseries SD R1R2} &
+\multicolumn{1}{c|}{\scriptsize\bfseries ID R1R3} &
+\multicolumn{1}{c|}{\scriptsize\bfseries SD R2R3} &
+\multicolumn{1}{c|}{\scriptsize\bfseries SD R1R3} &
+\multicolumn{1}{c|}{\scriptsize\bfseries SD H1H3} &
+\multicolumn{1}{c|}{\scriptsize\bfseries SD H2R2} &
+\multicolumn{1}{c|}{\scriptsize\bfseries SD H2H3} &
+\multicolumn{1}{c}{\scriptsize\bfseries SD H1H2} \\
+%#  - post pruning
+\midrule\multicolumn{11}{c}{\bfseries\scriptsize Usage of post-pruning}\\
+\scriptsize\emph{True} &  0.811  (0.07) &  0.743  (0.07) & \B  0.839 \B  (0.07) &  0.782  (0.02) &  0.828  (0.07) &  0.816  (0.07) &  0.780  (0.05) &  0.790  (0.09) &  0.753  (0.03) &  0.795  (0.04) \\
+\scriptsize\emph{False} & \B  0.818 \B  (0.07) & \B  0.750 \B  (0.06) &  0.839  (0.07) & \B  0.784 \B  (0.02) & \B  0.830 \B  (0.06) & \B  0.820 \B  (0.07) & \B  0.783 \B  (0.05) & \B  0.791 \B  (0.09) & \B  0.753 \B  (0.03) & \B  0.799 \B  (0.04) \\
+%#  - theta
+\midrule\multicolumn{11}{c}{\bfseries\scriptsize Used theta value}\\
+\scriptsize\emph{0.0} & \B  0.864 \B  (0.08) & \B  0.789 \B  (0.07) & \B  0.886 \B  (0.08) & \B  0.831 \B  (0.02) & \B  0.873 \B  (0.08) & \B  0.862 \B  (0.08) & \B  0.834 \B  (0.06) & \B  0.839 \B  (0.10) & \B  0.804 \B  (0.04) & \B  0.851 \B  (0.05) \\
+\scriptsize\emph{0.1} &  0.833  (0.07) &  0.767  (0.07) &  0.854  (0.07) &  0.803  (0.02) &  0.844  (0.07) &  0.834  (0.07) &  0.805  (0.05) &  0.810  (0.09) &  0.777  (0.03) &  0.821  (0.04) \\
+\scriptsize\emph{0.3} &  0.832  (0.07) &  0.763  (0.06) &  0.854  (0.07) &  0.801  (0.02) &  0.844  (0.07) &  0.833  (0.07) &  0.800  (0.05) &  0.808  (0.09) &  0.771  (0.03) &  0.816  (0.04) \\
+\scriptsize\emph{0.5} &  0.815  (0.07) &  0.746  (0.06) &  0.838  (0.07) &  0.786  (0.03) &  0.829  (0.06) &  0.818  (0.07) &  0.781  (0.06) &  0.793  (0.09) &  0.754  (0.04) &  0.799  (0.04) \\
+\scriptsize\emph{0.7} &  0.784  (0.06) &  0.715  (0.06) &  0.803  (0.07) &  0.750  (0.03) &  0.798  (0.06) &  0.787  (0.06) &  0.749  (0.06) &  0.752  (0.08) &  0.712  (0.03) &  0.763  (0.04) \\
+\scriptsize\emph{0.9} &  0.760  (0.06) &  0.699  (0.05) &  0.800  (0.07) &  0.729  (0.03) &  0.784  (0.06) &  0.774  (0.06) &  0.722  (0.04) &  0.742  (0.08) &  0.700  (0.03) &  0.733  (0.03) \\
+%#  - weight calculation
+\midrule\multicolumn{11}{c}{\bfseries\scriptsize Weight calculation method}\\
+\scriptsize\emph{same for each} &  0.811  (0.07) &  0.748  (0.07) &  0.837  (0.07) &  0.790  (0.02) &  0.829  (0.07) &  0.816  (0.07) &  0.788  (0.05) &  0.792  (0.09) &  0.761  (0.03) &  0.803  (0.04) \\
+\scriptsize\emph{kuncheva} & \B  0.856 \B  (0.08) & \B  0.765 \B  (0.07) & \B  0.892 \B  (0.08) & \B  0.803 \B  (0.03) & \B  0.869 \B  (0.08) & \B  0.859 \B  (0.08) & \B  0.800 \B  (0.06) & \B  0.821 \B  (0.10) & \B  0.762 \B  (0.03) & \B  0.818 \B  (0.05) \\
+\scriptsize\emph{pta related to whole} &  0.822  (0.08) &  0.749  (0.07) &  0.849  (0.08) &  0.792  (0.03) &  0.837  (0.07) &  0.827  (0.07) &  0.789  (0.06) &  0.799  (0.10) &  0.762  (0.03) &  0.805  (0.04) \\
+\scriptsize\emph{bell curve} &  0.769  (0.06) &  0.725  (0.06) &  0.779  (0.06) &  0.748  (0.02) &  0.781  (0.05) &  0.771  (0.05) &  0.750  (0.04) &  0.750  (0.07) &  0.727  (0.03) &  0.762  (0.03) \\
+%#  - aging calculation
+\midrule\multicolumn{11}{c}{\bfseries\scriptsize Aging method}\\
+\scriptsize\emph{weights proportional} & \B  0.879 \B  (0.08) & \B  0.804 \B  (0.07) & \B  0.895 \B  (0.08) & \B  0.836 \B  (0.02) & \B  0.882 \B  (0.07) & \B  0.872 \B  (0.07) & \B  0.845 \B  (0.06) & \B  0.851 \B  (0.10) & \B  0.813 \B  (0.04) & \B  0.861 \B  (0.05) \\
+\scriptsize\emph{constant} &  0.725  (0.05) &  0.673  (0.05) &  0.748  (0.05) &  0.695  (0.03) &  0.746  (0.05) &  0.735  (0.05) &  0.689  (0.05) &  0.702  (0.07) &  0.662  (0.03) &  0.701  (0.04) \\
+\scriptsize\emph{gaussian} &  0.840  (0.09) &  0.762  (0.08) &  0.874  (0.10) &  0.819  (0.03) &  0.859  (0.09) &  0.847  (0.09) &  0.812  (0.06) &  0.819  (0.11) &  0.784  (0.04) &  0.829  (0.05) \\
+\bottomrule\end{tabular}

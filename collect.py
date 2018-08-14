@@ -6,14 +6,10 @@ import numpy as np
 base_clfs = h.base_clfs()
 streams = h.streams()
 
-WEIGHT_CALCULATION = ('same_for_each', 'kuncheva',
-                      'pta_related_to_whole',
-                      'bell_curve')
-
-AGING_METHOD = ('weights_proportional', 'constant',
-                'gaussian')
-THETA = (.1, .3, .5, .7, .9)
-POST_PRUNING = (True, False)
+POST_PRUNING = h.POST_PRUNING()
+THETA = h.THETA()
+WEIGHT_CALCULATION = h.WEIGHT_CALCULATION()
+AGING_METHOD = h.AGING_METHOD()
 
 count = len(streams) * len(WEIGHT_CALCULATION) * len(AGING_METHOD) * len(THETA) * len(POST_PRUNING) * len(base_clfs)
 
